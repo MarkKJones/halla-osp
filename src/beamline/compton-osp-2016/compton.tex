@@ -1,11 +1,8 @@
-%\chapter{Hall A Compton Polarimeter}
+\infolevone{\chapter[Compton Polarimeter]{Compton Polarimeter \footnote{Author: D.~Gaskell \email{gaskelld@jlab.org}}}
 \label{sec:compton}
-%\footnote{Author: S.~K.~Nanda \email{nanda@jlab.org}}
+\setcounter{subsection}{0}
+}
 
-\vspace{40pt}
-\begin{center}
-{\bf\LARGE Hall A Compton Polarimeter}
-\end{center}
 \vspace{40pt}
 \newcommand{\dis}{\displaystyle}
 \newcommand{\nn}{\nonumber}
@@ -26,12 +23,19 @@
 \newcommand{\wer}{\omega_R}
 \newcommand{\wel}{\omega_L}
 
+
+\infoleveqnull{
+\section {Compton Polarimeter}
+}
+
+\infolevone{
 \section {Introduction}
 \label{sec:compton_introduction}
+}
 The Hall A Compton
 Polarimeter provides  electron beam polarization measurements in a continuous and non-intrusive manner
-using  Compton scattering of polarized electrons from polarized photons. A schematic layout of the
-Compton polarimeter is shown in Fig.\ref{fig:compton_setup}. The primary features of the Compton polarimeter are:
+using  Compton scattering of polarized electrons from polarized photons. \infolevone{A schematic layout of the
+Compton polarimeter is shown in Fig.\ref{fig:compton_setup}.} The primary features of the Compton polarimeter are:
 \begin{enumerate}
 \item A vertical magnetic chicane with  four dipole magnets to transport  the CEBAF electron beam to the Compton Interaction Point (CIP).
 \item A high-finesse Fabry-Perot (FP) cavity serving as the photon target, located at the lower straight section of the chicane with the cavity axis at  an angle of 24~mr with respect to  the electron beam.  
@@ -40,6 +44,7 @@ Compton polarimeter is shown in Fig.\ref{fig:compton_setup}. The primary feature
 primary beam by the third dipole of the chicane.
 \end{enumerate}
 
+\infolevone{
  \begin{figure}[htp]
     \begin{center}
         \includegraphics*[angle=0,width=\textwidth]{compton_setup}
@@ -884,44 +889,66 @@ On the EPICS control panel, pull the "OPTICS" menu down.\\
  The Laser spots would switch off on the CCD control TV screen
 \end {itemize}
 
+}
+
 \begin{safetyen}{0}{0}
-\section {Safety Assessment}
+\infolevone{\section {Safety Assessment}
 \label{sec:compton_safety}
-\end{safetyen}
+}
 
-\begin{safetyen}{10}{15}
-\subsection{Magnets}
+\subsection{Hazards}
+There are several hazards associated with the Hall A Compton polarimeter beyond those associated with the rest of the beamline. These hazrds includde:
 
-Particular care must be taken while working in the vicinity of the dipole magnets of the 
-Compton polarimeter magnetic chicane, as they can have large currents
-running in them producing strong magnetic fields.  All four dipoles are
-powered in series from a common power supply. The power supply for
-the dipoles is located in the Beam Switch Yard Building (Building 98) with access restricted to authorized personnel only.
-While the power supply  is capable of sourcing  a maximum current of 600~A, the nominal operating current for the dipole magnets is 500~A and is not to be exceeded under normal operating conditions.  All electrical connections to the magnets are covered with thick Plexiglas safety cover shields. These shields can  be removed for service only by authorized personnel, with the concurrence of the Hall A work coordinator, following JLab's "Lock Out/ Tag Out" procedures.
+\begin{itemize}
+\item{Magnetic fields from the four dipole magnets in the Compton chicane.}
+\item{Vacuum windows: There are thin metal bellows in several regions of the Compton chicane, as well as a thin window at the end of the photon beamline.}
+\item{Electrical: These exist in the vicinity of the magnets leads as well as the detector high voltage.}
+\item{Lasers: The polarimeter uses a laser system that can generate up 30~W of power at 1064~nm and 3~W at 532~nm.}
+\end{itemize}
 
-As with any other element that can affect the path of the electron beam, the magnets are controlled by the MCC. Status of the magnets are indicated by a 
-red light, located over each of the magnets, which is activated via a magnetic field sensitive switch placed on the coils of one of the dipoles. When the magnets are ON, these lights display a flashing red beacon indicating the presence of magnetic field; only authorized personnel for the Compton polarimeter may  work in the immediate vicinity. At full excitation of the magnets, the leakage field from the magnet could exceed 5~Gauss within a six-inch boundary from the physical ends of each magnet. Access to this region by personnel with  medical monitoring electronic devices and/or metallic implants is prohibited, when the magnets are ON.
+\subsection{Mitigation}
+The special hazards associated with the Compton polarimeter are mitigated as describe below.
 
-\subsection{Vacuum System}
-The Compton Polarimeter beam line elements contain thin metal bellows in several places. There is a thin vacuum window at the end of the scattered photon beam line, as well. These could rupture if struck with sharp or heavy objects accidentally, leading to an implosion.  While working near these bellows or windows, protective earmuffs and safety  glasses are required. Only authorized personnel for the Compton polarimeter group may  work near these elements. 
+\begin{itemize}
+\item{Red blinking lights are active when the dipole chicane magnets are on. At full excitation of the magnets, the leakage field from the magnet could exceed 5~Gauss within a six-inch boundary from the physical ends of each magnet. Access to this region by personnel with  medical monitoring electronic devices and/or metallic implants is prohibited, when the magnets are ON.}
+\item{The thin metal bellows are covered where possible to mitigate possible damage. While working near these bellows or the photon beamline window, hearing and eye protection are required. Only authorized personnel for the Compton polarimeter group may  work near these elements.}
+\item{Electrical hazards due to magnet leads are mitigated using Plexiglass shields where appropriate.  All detectors use use standard SHV connectors.}
+\item{The Compton laser system is fully contained in a special interlocked enclosure between the second and third dipoles.  Experts may open the enclosure for laser alignment, but the area is then protected with drop-down laser curtains and pressure sensitive mats interlocked to the laser system.  The operating procedure for this laser is described in 
+Jeffeson Lab Laser Standard Operating Procedure \cite{compton_LSOP} (LSOP). A copy of the LSOP is available in the tunnel wall next to the laser hut. Only personnel authorized in the LSOP with appropriate eye protection are permitted to access the laser hut. All other workers not trained for lasers, are required to disable the laser power supply following JLab's "Lock Out/ Tag Out" procedures in coordination with the Hall A Work Coordinator.}
+\end{itemize}
 
-\subsection{Lasers}
-The primary laser hazards in the optical table of the Compton Polarimeter are 1064~nm infra-red lasers with up to 30~W CW beam, and a  532~nm green laser up to 3~W CW power.
-They are housed in the tunnel in a laser hut with light barriers  on all sides to isolate the laser beams  from the  outside world. A flashing yellow beacon installed in the tunnel indicates laser READY on ON status. Three crash buttons are provided in the tunnel for emergency shutdown of the laser. The acces doors to the laser hut are interlocked to the laser power supplies with  door closure switches. In case a laser hut access door is opened accidentally, the interlock system shuts down the lasers. 
+%\subsection{Magnets}
+%
+%Particular care must be taken while working in the vicinity of the dipole magnets of the 
+%Compton polarimeter magnetic chicane, as they can have large currents
+%running in them producing strong magnetic fields.  All four dipoles are
+%powered in series from a common power supply. The power supply for
+%the dipoles is located in the Beam Switch Yard Building (Building 98) with access restricted to authorized personnel only.
+%While the power supply  is capable of sourcing  a maximum current of 600~A, the nominal operating current for the dipole magnets is 500~A and is not to be exceeded under normal operating conditions.  All electrical connections to the magnets are covered with thick Plexiglas safety cover shields. These shields can  be removed for service only by authorized personnel, with the concurrence of the Hall A work coordinator, following JLab's "Lock Out/ Tag Out" procedures.
 
-All functions of the lasers are remotely controlled and personnel access to the laser hut
-is not necessary during routine operation of the Compton Polarimeter. However, in case of repair  
-or maintenance work, access to the laser enclosure may be necessary. The safe operating procedure for this laser is described in 
-Jeffeson Lab Laser Standard Operating Procedure \cite{compton_LSOP} (LSOP). A copy of the LSOP is available in the tunnel wall next to the laser hut. Only personnel authorized in the LSOP with appropriate eye protection are permitted to access the laser hut. All other workers not trained for lasers, are required to disable the laser power supply following JLab's "Lock Out/ Tag Out" procedures in coordination with the Hall A Work Coordinator.
+%As with any other element that can affect the path of the electron beam, the magnets are controlled by the MCC. Status of the magnets are indicated by a 
+%red light, located over each of the magnets, which is activated via a magnetic field sensitive switch placed on the coils of one of the dipoles. When the magnets are ON, these lights display a flashing red beacon indicating the presence of magnetic field; only authorized personnel for the Compton polarimeter may  work in the immediate vicinity. At full excitation of the magnets, the leakage field from the magnet could exceed 5~Gauss within a six-inch boundary from the physical ends of each magnet. Access to this region by personnel with  medical monitoring electronic devices and/or metallic implants is prohibited, when the magnets are ON.
+
+%\subsection{Vacuum System}
+%The Compton Polarimeter beam line elements contain thin metal bellows in several places. There is a thin vacuum window at the end of the scattered photon beam line, as well. These could rupture if struck with sharp or heavy objects accidentally, leading to an implosion.  While working near these bellows or windows, protective earmuffs and safety  glasses are required. Only authorized personnel for the Compton polarimeter group may  work near these elements. 
+
+%\subsection{Lasers}
+%The primary laser hazards in the optical table of the Compton Polarimeter are 1064~nm infra-red lasers with up to 30~W CW beam, and a  532~nm green laser up to 3~W CW power.
+%They are housed in the tunnel in a laser hut with light barriers  on all sides to isolate the laser beams  from the  outside world. A flashing yellow beacon installed in the tunnel indicates laser READY on ON status. Three crash buttons are provided in the tunnel for emergency shutdown of the laser. The acces doors to the laser hut are interlocked to the laser power supplies with  door closure switches. In case a laser hut access door is opened accidentally, the interlock system shuts down the lasers. 
+
+%All functions of the lasers are remotely controlled and personnel access to the laser hut
+%is not necessary during routine operation of the Compton Polarimeter. However, in case of repair  
+%or maintenance work, access to the laser enclosure may be necessary. The safe operating procedure for this laser is described in 
+%Jeffeson Lab Laser Standard Operating Procedure \cite{compton_LSOP} (LSOP). A copy of the LSOP is available in the tunnel wall next to the laser hut. Only personnel authorized in the LSOP with appropriate eye protection are permitted to access the laser hut. All other workers not trained for lasers, are required to disable the laser power supply following JLab's "Lock Out/ Tag Out" procedures in coordination with the Hall A Work Coordinator.
  
-\subsection{High Voltage}
+%\subsection{High Voltage}
 
-There are up to 25 photomultiplier tubes within the Compton photon detector module. There are also several beam diagnostic scintillation counters dispersed along the Compton Polarimeter chicane.
-Each tube is connected to a high voltage power supply located in the beamline instrumentation area. The maximum voltage is 3000 Volts. 
-In addition, the electron detector is supplied with up to 350~Volts. Only SHV connectors may be used to connect the high voltage to the detectors. 
-The high voltage supply source must be turned off prior to conecting or disconnecting the HV to the  detector element being accessed
-for servicing purposes. Only members of the Compton group
-are authorized to access the  detectors.\\
+%There are up to 25 photomultiplier tubes within the Compton photon detector module. There are also several beam diagnostic scintillation counters dispersed along the Compton Polarimeter chicane.
+%Each tube is connected to a high voltage power supply located in the beamline instrumentation area. The maximum voltage is 3000 Volts. 
+%In addition, the electron detector is supplied with up to 350~Volts. Only SHV connectors may be used to connect the high voltage to the detectors. 
+%The high voltage supply source must be turned off prior to conecting or disconnecting the HV to the  detector element being accessed
+%for servicing purposes. Only members of the Compton group
+%are authorized to access the  detectors.\\
 
 \end{safetyen}
 
@@ -950,6 +977,7 @@ the primary contact person (see Table~\ref{tab:compton:personnel}) before being 
 \label{tab:compton:personnel}
 \end{table}
 
+\infolevone{
 %\bibliographystyle{plain}
 \begin{thebibliography}{99}
 %\begin{thebibliography}
@@ -958,7 +986,7 @@ Hall A Compton Polarimeter Upgrade, \url{https://userweb.jlab.org/~nanda/compton
 
 \bibitem{compton_IR_cavity_pub} \url{http://hallaweb.jlab.org/compton/Documentation/Papers/nima4592001.pdf}.
 
-\bibitem{compton_LSOP} Jeffeson Lab Laser Standard Operating Procedure for Hall A Compton Polarimeter Laser System,\url{https://jlabdoc.jlab.org/docushare/dsweb/Get/Document-86141/PHY-14-002-LOSP.pdf}.
+\bibitem{compton_LSOP} Jeffeson Lab Laser Standard Operating Procedure for Hall A Compton Polarimeter Laser System,\url{https://mis.jlab.org/mis/apps/mis_forms/operational_safety_procedure_form.cfm?entry_id=138973}.
 
 \bibitem{EPICSwww} Experimental Physics Instrumentation and Control System, \url{http://www.aps.anl.gov/asd/controls/epics/EpicsDocumentation/WWWPages/EpicsDoc.html}.
 
@@ -967,7 +995,7 @@ Hall A Compton Polarimeter Upgrade, \url{https://userweb.jlab.org/~nanda/compton
 \bibitem{compton_beam_tune} Beam tuning with the Hall ACompton Chicane,
 \url{http://opsntsrv.acc.jlab.org/ops\_docs/online\_document_files/MCC\_online\_files/HallA\_beam\_delivery\_proc.pdf}
 \end{thebibliography}
-
+}
 %%\end{document}
 
 %\JosephZhang{Optics}
